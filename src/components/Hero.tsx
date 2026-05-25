@@ -1,24 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { assetUrl } from '../utils/assetUrl';
 
 const slides = [
   { 
     title: "منصة ديار — أثاث وخدمات متكاملة", 
     sub: "المنصة الأولى التي تجمع بين أفضل تجار الأثاث، ومقدمي خدمات التصميم والتركيب في مكان واحد.", 
     btnText: "تسوق الأثاث",
-    img: "/hero_1.jpg" 
+    img: assetUrl("/hero_1.jpg") 
   },
   { 
     title: "جرّب الأثاث في منزلك بالذكاء الاصطناعي", 
     sub: "لا تتردد في الاختيار. استخدم تقنيتنا المتطورة لدمج الأثاث في مساحتك الخاصة قبل الشراء.", 
     btnText: "جرب الآن",
-    img: "/hero_2.jpg" 
+    img: assetUrl("/hero_2.jpg") 
   },
   { 
     title: "برنامج ديار للولاء والتسويق بالشراكة", 
     sub: "تسوق واكسب نقاط الولاء، أو انضم كمسوق بالعمولة وابدأ بجني الأرباح مع منصة ديار.", 
     btnText: "انضم كشريك",
-    img: "/hero_3.jpg" 
+    img: assetUrl("/hero_3.jpg") 
   },
 ];
 

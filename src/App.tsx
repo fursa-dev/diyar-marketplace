@@ -5,6 +5,7 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom';
 import { ShoppingCart, Heart, User, Search, Menu, SlidersHorizontal, Home as HomeIcon, Grid, Camera, LogOut } from 'lucide-react';
+import { assetUrl } from './utils/assetUrl';
 import { Footer } from './components/Sections.tsx';
 import { FilterModal } from './components/FilterModal.tsx';
 import { CartSidebar } from './components/CartSidebar.tsx';
@@ -142,7 +143,7 @@ export default function App() {
           <div className="max-w-7xl mx-auto px-4 py-1.5 md:px-6 md:py-2.5 flex flex-wrap md:flex-nowrap items-center justify-between gap-3 md:gap-5">
             <div className="flex items-center w-full md:w-auto order-1 justify-between md:justify-start">
               <Link to="/">
-                <img src="/logo_diyar.svg" alt="DIYAR" className="h-7 md:h-9" />
+                <img src={assetUrl("/logo_diyar.svg")} alt="DIYAR" className="h-7 md:h-9" />
               </Link>
               <div className="flex items-center gap-3 md:hidden">
                 <span className="text-diyar-dark bg-gray-100 rounded-full w-8 h-8 flex items-center justify-center">

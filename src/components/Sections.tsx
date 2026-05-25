@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import ProductCard from './ProductCard.tsx';
 import { Star, Quote, ArrowLeft, Send, Sparkles, UploadCloud, Grid, Store, Briefcase, Paintbrush, Smartphone, Scan, Box, BellRing, Wrench, ShieldCheck, Truck, HeadphonesIcon, CreditCard, PenTool, Twitter, Instagram, MessageCircle } from 'lucide-react';
+import { assetUrl } from '../utils/assetUrl';
 
 export function BestSellers() {
   const [tab, setTab] = useState(0);
@@ -214,11 +215,11 @@ export function AIBanner() {
           <div className="relative w-full max-w-md aspect-square md:aspect-[4/3] bg-white rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
             
             {/* Before Image */}
-            <img src="/before.png" alt="Empty Room Before" className="absolute inset-0 w-full h-full object-cover" />
+            <img src={assetUrl("/before.png")} alt="Empty Room Before" className="absolute inset-0 w-full h-full object-cover" />
             
             {/* After Image and Clip */}
             <div className="absolute inset-0 animate-[sweep_4s_ease-in-out_infinite]">
-               <img src="/after.png" alt="Room After AI Placement" className="absolute inset-0 w-full h-full object-cover" />
+               <img src={assetUrl("/after.png")} alt="Room After AI Placement" className="absolute inset-0 w-full h-full object-cover" />
             </div>
             
             {/* Animated scanning line synced with clip path */}
@@ -398,7 +399,7 @@ export function SummerBanner() {
     <div className="max-w-5xl mx-auto px-4 py-8 md:py-12">
       <div className="rounded-2xl md:rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group">
         <img 
-          src="/بنر عروض الصيف.png" 
+          src={assetUrl("/بنر عروض الصيف.png")} 
           alt="عروض الصيف" 
           className="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-700" 
         />
@@ -412,7 +413,7 @@ export function SummerBanner2() {
     <div className="max-w-7xl mx-auto px-4 py-8 md:py-12">
       <div className="rounded-2xl md:rounded-3xl overflow-hidden shadow-sm hover:shadow-md transition-shadow relative group bg-diyar-cream/20">
         <img 
-          src="/بنر عروض الصيف 2.png" 
+          src={assetUrl("/بنر عروض الصيف 2.png")} 
           alt="عروض الصيف 2" 
           className="w-full h-auto object-cover group-hover:scale-[1.02] transition-transform duration-700" 
         />
@@ -613,15 +614,15 @@ export function AppPromo() {
 export function FastOffersSlider() {
   const offers = [
     { 
-      img: "/panel%201.png",
+      img: assetUrl("/panel%201.png"),
       color: "bg-diyar-dark" 
     },
     { 
-      img: "/panel%202.png",
+      img: assetUrl("/panel%202.png"),
       color: "bg-diyar-brown" 
     },
     { 
-      img: "/panel%203.png",
+      img: assetUrl("/panel%203.png"),
       color: "bg-gray-800" 
     }
   ];
@@ -701,7 +702,7 @@ export function LoyaltyPromo() {
            <div className="flex-1 relative w-full flex justify-center items-center mt-2 lg:mt-0 lg:pl-10">
              <div className="relative w-full max-w-[500px]">
                <div className="absolute inset-0 bg-amber-500/20 rounded-full blur-[80px] transform scale-110 z-0"></div>
-               <img src="/صورة نقاط الولاء.png" alt="برنامج نقاط الولاء" className="w-[90%] sm:w-[80%] max-w-[320px] lg:max-w-none mx-auto lg:w-[125%] lg:-ml-[12.5%] xl:w-[140%] xl:-ml-[20%] relative z-10 drop-shadow-2xl hover:-translate-y-2 transition-transform duration-700 block" />
+               <img src={assetUrl("/صورة نقاط الولاء.png")} alt="برنامج نقاط الولاء" className="w-[90%] sm:w-[80%] max-w-[320px] lg:max-w-none mx-auto lg:w-[125%] lg:-ml-[12.5%] xl:w-[140%] xl:-ml-[20%] relative z-10 drop-shadow-2xl hover:-translate-y-2 transition-transform duration-700 block" />
              </div>
            </div>
         </div>
@@ -716,7 +717,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-6 md:px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-12 mb-6 md:mb-10 text-right">
           <div>
-            <img src="/logo_diyar.svg" alt="DIYAR" className="h-10 md:h-12 mb-6 brightness-0 invert" />
+            <img src={assetUrl("/logo_diyar.svg")} alt="DIYAR" className="h-10 md:h-12 mb-6 brightness-0 invert" />
             <p className="text-white/70 leading-relaxed mb-6 text-sm md:text-base">المنصة الأولى في المملكة لبيع الأثاث الفاخر من أعرق المتاجر والتجار لتجهيز منزلك بأرقى التصاميم.</p>
             <div className="flex gap-4">
               <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-diyar-brown hover:text-white cursor-pointer transition">

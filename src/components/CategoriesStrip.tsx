@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { BedDouble, Sofa, CookingPot, MonitorSmartphone, Paintbrush, Wrench, PackageSearch } from 'lucide-react';
+import { assetUrl } from '../utils/assetUrl';
 
 const categories = [
-  { id: "bedroom", name: "غرف النوم", icon: BedDouble, img: "/categories/%D8%BA%D8%B1%D9%81%20%D8%A7%D9%84%D9%86%D9%88%D9%85.png" },
-  { id: "living-room", name: "الصالونات", icon: Sofa, img: "/categories/%D8%A7%D9%84%D8%B5%D8%A7%D9%84%D9%88%D9%86%D8%A7%D8%AA.png" },
-  { id: "kitchen", name: "المطابخ", icon: CookingPot, img: "/categories/%D8%A7%D9%84%D9%85%D8%B7%D8%A7%D8%A8%D8%AE.png" },
-  { id: "office", name: "المكاتب", icon: MonitorSmartphone, img: "/categories/%D8%A7%D9%84%D9%85%D9%83%D8%A7%D8%AA%D8%A8.png" },
-  { id: "decor", name: "ديكورات", icon: PackageSearch, img: "/categories/%D8%AF%D9%8A%D9%83%D9%88%D8%B1%D8%A7%D8%AA.png" },
-  { id: "interior-design", name: "تصميم داخلي", icon: Paintbrush, isService: true, img: "/categories/%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D8%AF%D8%A7%D8%AE%D9%84%D9%8A.png" },
-  { id: "maintenance", name: "تركيب وصيانة", icon: Wrench, isService: true, img: "/categories/%D8%AA%D8%B1%D9%83%D9%8A%D8%A8%20%D9%88%D8%B5%D9%8A%D8%A7%D9%86%D8%A9.png" },
+  { id: "bedroom", name: "غرف النوم", icon: BedDouble, img: assetUrl("/categories/%D8%BA%D8%B1%D9%81%20%D8%A7%D9%84%D9%86%D9%88%D9%85.png") },
+  { id: "living-room", name: "الصالونات", icon: Sofa, img: assetUrl("/categories/%D8%A7%D9%84%D8%B5%D8%A7%D9%84%D9%88%D9%86%D8%A7%D8%AA.png") },
+  { id: "kitchen", name: "المطابخ", icon: CookingPot, img: assetUrl("/categories/%D8%A7%D9%84%D9%85%D8%B7%D8%A7%D8%A8%D8%AE.png") },
+  { id: "office", name: "المكاتب", icon: MonitorSmartphone, img: assetUrl("/categories/%D8%A7%D9%84%D9%85%D9%83%D8%A7%D8%AA%D8%A8.png") },
+  { id: "decor", name: "ديكورات", icon: PackageSearch, img: assetUrl("/categories/%D8%AF%D9%8A%D9%83%D9%88%D8%B1%D8%A7%D8%AA.png") },
+  { id: "interior-design", name: "تصميم داخلي", icon: Paintbrush, isService: true, img: assetUrl("/categories/%D8%AA%D8%B5%D9%85%D9%8A%D9%85%20%D8%AF%D8%A7%D8%AE%D9%84%D9%8A.png") },
+  { id: "maintenance", name: "تركيب وصيانة", icon: Wrench, isService: true, img: assetUrl("/categories/%D8%AA%D8%B1%D9%83%D9%8A%D8%A8%20%D9%88%D8%B5%D9%8A%D8%A7%D9%86%D8%A9.png") },
 ];
 
 export default function CategoriesStrip() {

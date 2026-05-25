@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
+import { assetUrl } from '../utils/assetUrl';
 import Hero from '../components/Hero.tsx';
 import CategoriesStrip from '../components/CategoriesStrip.tsx';
 import FeaturedDeals from '../components/FeaturedDeals.tsx';
@@ -52,7 +53,7 @@ export default function HomePage() {
             </button>
             <div className="relative cursor-pointer" onClick={() => setShowAdPopup(false)}>
               <img 
-                src="/بنر عروض الصيف.png" 
+                src={assetUrl("/بنر عروض الصيف.png")} 
                 alt="عروض الصيف" 
                 className="w-full h-auto object-cover"
               />
